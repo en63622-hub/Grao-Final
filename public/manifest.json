@@ -1,0 +1,9 @@
+{
+  "name": "Grão — Finanças Pessoais",
+  "short_name": "Grão",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F5F0",
+  "theme_color": "#152E1A",
+  "orientation": "portrait"
+}

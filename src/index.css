@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+* { -webkit-tap-highlight-color: transparent; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #B7D6B9; border-radius: 999px; }
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl2 shadow-card border border-moss-100/70;
+  }
+  .btn-primary {
+    @apply bg-moss-700 text-paper font-semibold rounded-full px-5 py-3 active:scale-[0.97] transition-transform disabled:opacity-40;
+  }
+  .btn-secondary {
+    @apply bg-moss-50 text-moss-800 font-semibold rounded-full px-5 py-3 border border-moss-200 active:scale-[0.97] transition-transform;
+  }
+  .btn-ghost {
+    @apply text-moss-700 font-medium underline underline-offset-4 decoration-moss-300;
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-moss-200 bg-moss-50/40 px-4 py-3 text-ink placeholder:text-slate2/60 focus:outline-none focus:ring-2 focus:ring-moss-400 focus:border-transparent;
+  }
+  .tag-pill {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+  .tag-urgente { @apply bg-red-50 text-red-700; }
+    .tag-necessario { @apply bg-yellow-50 text-yellow-700; }
+    .tag-futil { @apply bg-green-50 text-green-700; }
+    .tag-recebimento { @apply bg-blue-50 text-blue-700; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise { animation: rise .28s ease-out; }
